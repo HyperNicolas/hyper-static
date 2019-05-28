@@ -20,18 +20,18 @@ const StyledButton = styled(Button)`
 const Title = styled.div`
   font-size: 1.3rem;
   font-weight: 600;
-  padding-bottom: 1rem;
+  padding-bottom: ${props => (props.tool ? '1rem' : '0.5rem')};
 `;
 const Description = styled.div`
   color: ${props => props.theme.textColorLight};
 `;
 const ToolDescription = styled.div`
   color: #6b6b6b;
-  padding-bottom: 0.5rem;
+  padding-bottom: ${props => (props.tool ? '1rem' : '0.5rem')};
 `;
 const SummaryIcon = styled(Icon)`
   font-size: 4rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 `;
 
 const GenericContainer = styled.div`
@@ -104,13 +104,13 @@ const summary = [
     title: 'Third-party integrations',
     description:
       'Pull and push data from multiple sources and manage everything in one single platform, your Hyperportal.',
-    icon: 'pie-chart'
+    icon: 'api'
   }
 ];
 
 const tools = [
   {
-    title: 'integrated CRM tool',
+    title: 'Integrated CRM tool',
     description: 'Centralise and manage all your contact info efficiently',
     bullets: [
       'Centralise and manage all data from customers, propsects, suppliers and employees',
@@ -214,8 +214,8 @@ const Index = () => (
           <Wrapper className="cp-c-row cp-c-align-spacebetween-center">
             <Image src={src} className="cp-i-100 cp-i-md-50" />
             <div className="cp-i-100 cp-i-md-45">
-              <Title>{title}</Title>
-              <ToolDescription>{description}</ToolDescription>
+              <Title tool>{title}</Title>
+              <ToolDescription tool>{description}</ToolDescription>
               {bullets.map(bullet => (
                 <BulletContainer
                   key={bullet}
@@ -236,8 +236,8 @@ const Index = () => (
         <Container background key={title}>
           <Wrapper className="cp-c-row cp-c-align-spacebetween-center">
             <div className="cp-i-100 cp-i-md-45">
-              <Title>{title}</Title>
-              <ToolDescription>{description}</ToolDescription>
+              <Title tool>{title}</Title>
+              <ToolDescription tool>{description}</ToolDescription>
               {bullets.map(bullet => (
                 <BulletContainer
                   key={bullet}

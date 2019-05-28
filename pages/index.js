@@ -72,6 +72,7 @@ const BulletContainer = styled.div`
 `;
 const StyledIcon = styled(Icon)`
   margin-right: 0.5rem;
+  margin-top: 0.1rem;
   font-size: 1rem;
 `;
 const Customer = styled.div`

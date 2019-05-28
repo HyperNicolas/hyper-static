@@ -4,7 +4,7 @@ import { Icon, Button } from 'antd';
 import { Wrapper, media } from '../components/utils/styledComponents';
 
 const HeroTitle = styled.div`
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 700;
   padding-bottom: 1rem;
 `;
@@ -34,6 +34,7 @@ const GenericContainer = styled.div`
   text-align: center;
 `;
 const Container = styled.div`
+  padding: 3rem 1rem;
   :nth-child(odd) {
     background: #f7faff;
   }
@@ -180,7 +181,8 @@ const Index = () => (
       <div className="cp-i-100 cp-i-md-40">
         <HeroTitle>Conquer your workflows</HeroTitle>
         <HeroDescription>
-          A visual way to transform complex workflows in simple task management
+          A workflows-first CRM to boost quality, communication, and
+          productivity
         </HeroDescription>
         <StyledButton type="primary">Request demo</StyledButton>
       </div>
@@ -198,10 +200,10 @@ const Index = () => (
     </GenericContainer>
     {tools.map(({ title, description, bullets, src, color }, index) =>
       index % 2 == 0 ? (
-        <Container key={title} className="cp-c-padding-3">
-          <Wrapper className="cp-c-row cp-c-align-start-center">
+        <Container key={title}>
+          <Wrapper className="cp-c-row cp-c-align-spacebetween-center">
             <Image src={src} className="cp-i-100 cp-i-md-50" />
-            <div className="cp-i-100 cp-i-md-50">
+            <div className="cp-i-100 cp-i-md-45">
               <Title>{title}</Title>
               <ToolDescription>{description}</ToolDescription>
               {bullets.map(bullet => (
@@ -221,9 +223,9 @@ const Index = () => (
           </Wrapper>
         </Container>
       ) : (
-        <Container background key={title} className="cp-c-padding-3">
-          <Wrapper className="cp-c-row cp-c-align-start-center">
-            <div className="cp-i-100 cp-i-md-50">
+        <Container background key={title}>
+          <Wrapper className="cp-c-row cp-c-align-spacebetween-center">
+            <div className="cp-i-100 cp-i-md-45">
               <Title>{title}</Title>
               <ToolDescription>{description}</ToolDescription>
               {bullets.map(bullet => (

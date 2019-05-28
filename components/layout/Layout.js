@@ -1,6 +1,7 @@
 import Helmet from 'react-helmet';
 import styled from 'styled-components';
 import Header from '../header/Header';
+import Footer from '../footer/Footer';
 
 const Container = styled('div')`
   padding-top: 3rem;
@@ -32,6 +33,7 @@ const Layout = props => (
     </Helmet>
     <Header />
     <Container>{props.children}</Container>
+    <Footer />
   </div>
 );
 

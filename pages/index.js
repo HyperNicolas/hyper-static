@@ -30,7 +30,7 @@ const ToolDescription = styled.div`
   padding-bottom: ${props => (props.tool ? '1rem' : '0.5rem')};
 `;
 const SummaryIcon = styled(Icon)`
-  font-size: 4rem;
+  font-size: 3.5rem;
   margin-bottom: 0.5rem;
 `;
 

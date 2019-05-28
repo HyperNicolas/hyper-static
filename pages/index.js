@@ -260,7 +260,7 @@ const Index = () => (
     )}
     <GenericContainer background className="cp-c-padding-3">
       <Wrapper>
-        <Title>Some of our Customers</Title>
+        <Title tool>Some of our Customers</Title>
         <div className="cp-c-row cp-c-align-spacebetween-center">
           {customers.map(customer => (
             <Customer className="cp-i-15" key={customer} src={customer} />
@@ -270,7 +270,7 @@ const Index = () => (
     </GenericContainer>
     <GenericContainer className="cp-c-padding-3">
       <Wrapper>
-        <Title>Start automating your business</Title>
+        <Title tool>Start automating your business</Title>
         <HeroDescription>
           Request a demo, start building your first workflows and discover how
           it can improve your business.

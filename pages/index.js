@@ -83,7 +83,7 @@ const summary = [
       'Don’t miss anything from your to-do list and control your own flow. Easily design and create new steps. Update the order of logic and add automatic e-mails to your flow to reach customers at the right moment.'
   },
   {
-    title: 'Responsiveness',
+    title: 'Web-based',
     description:
       'Naturally and automatically adjust to fit any hardware you use. Use it on the road or in the office. The software was designed to be used on phones, tablets and desktops.'
   },

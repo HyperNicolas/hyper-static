@@ -85,7 +85,7 @@ const summary = [
   {
     title: 'Web-based',
     description:
-      'Naturally and automatically adjust to fit any hardware you use. Use it on the road or in the office. The software was designed to be used on phones, tablets and desktops.'
+      'Naturally and automatically adjust to fit any hardware you use. Use it on the road or in the office.'
   },
   {
     title: 'Automate',

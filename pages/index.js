@@ -80,7 +80,7 @@ const summary = [
   {
     title: 'Flexibility',
     description:
-      'Don’t miss anything from your to-do list and control your own flow. Easily design and create new steps. Update the order of logic and add automatic e-mails to your flow to reach customers at the right moment.'
+      'Easily design, deploy, and evaluate new ways of working to your workforce.'
   },
   {
     title: 'Web-based',

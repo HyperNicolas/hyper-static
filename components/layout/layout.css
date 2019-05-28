@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:200,400,600,700');
+
+html,
+body,
+#__next {
+  height: 100%;
+}
+
+body {
+  font-family: 'Muli', sans-serif !important;
+  background: #fffcfc !important;
+}
+
+#__next {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#main-content {
+  flex: 1 0 auto;
+}
+
+.ant-drawer .ant-drawer-body {
+  padding: 0;
+}
+.ant-modal .ant-modal-body {
+  padding: 0;
+}
+.ant-popover .ant-popover-inner-content {
+  padding: 0.5rem 0;
+}

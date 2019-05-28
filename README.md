@@ -1,2 +1,1 @@
-# hyper-static
-Hypercharge
+# hoseki

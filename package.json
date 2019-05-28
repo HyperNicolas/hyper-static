@@ -1,0 +1,45 @@
+{
+  "name": "hyper-static",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HyperNicolas/hyper-static.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HyperNicolas/hyper-static/issues"
+  },
+  "homepage": "https://github.com/HyperNicolas/hyper-static#readme",
+  "dependencies": {
+    "@zeit/next-css": "1.0.1",
+    "antd": "3.18.1",
+    "css-loader": "1.0.1",
+    "email-validator": "2.0.4",
+    "express": "4.16.4",
+    "formik": "1.5.7",
+    "hyperplan": "0.4.1",
+    "next": "8.1.0",
+    "next-routes": "1.4.2",
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
+    "react-helmet": "5.2.1",
+    "styled-components": "4.2.0"
+  },
+  "browser": {
+    "stylis": false
+  },
+  "devDependencies": {
+    "babel-plugin-import": "1.11.0",
+    "babel-plugin-lodash": "3.3.4",
+    "babel-plugin-styled-components": "1.10.0"
+  }
+}

@@ -181,7 +181,7 @@ const Index = () => (
       <div className="cp-i-100 cp-i-md-40">
         <HeroTitle>Conquer your workflows</HeroTitle>
         <HeroDescription>
-          A workflows-first CRM to boost quality, communication, and
+          A workflows-first CRM to boost quality, collaboration, and
           productivity
         </HeroDescription>
         <StyledButton type="primary">Request demo</StyledButton>

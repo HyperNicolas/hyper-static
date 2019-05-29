@@ -19,7 +19,7 @@ const Container = styled.div`
   }
 `;
 const Image = styled.div`
-  padding-top: 35%;
+  padding-top: 34%;
   background: ${props =>
     props.src && `url('${props.src}') no-repeat center center`};
   background-size: cover;
@@ -49,7 +49,7 @@ const tools = [
       'Import/export your current contacts database',
       'Communicates with GDRP online customer Portal'
     ],
-    src: '/static/crm.png',
+    src: '/static/crm2.png',
     color: '#F8D310'
   },
   {
@@ -62,7 +62,7 @@ const tools = [
       'User request for exporting data',
       'Transparancy'
     ],
-    src: '/static/gdpr.png',
+    src: '/static/gdpr2.png',
     color: '#49AFEA'
   },
   {
@@ -75,7 +75,7 @@ const tools = [
       'Search and filter through date',
       'Completely customisable'
     ],
-    src: '/static/cms.png',
+    src: '/static/cms2.png',
     color: '#A379F7'
   },
   {
@@ -90,7 +90,7 @@ const tools = [
       'Google adwords specialists that can assist you always reach the right audience',
       'SEO suite to optimise your search engine results'
     ],
-    src: '/static/ecom.png',
+    src: '/static/ecom2.png',
     color: '#5EB158'
   },
   {
@@ -102,7 +102,7 @@ const tools = [
       'Send automated flows in your workflow',
       'GDPR compliant'
     ],
-    src: '/static/email.png',
+    src: '/static/email2.png',
     color: '#E33584'
   }
 ];

@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { Button, Modal } from 'antd';
 import { Wrapper, media } from '../utils/styledComponents';
+import ContactForm from '../form/ContactForm';
 
 const HeroTitle = styled.div`
   font-size: 1.8rem;
@@ -28,22 +29,28 @@ const HeroImage = styled.div`
   }
 `;
 
-class Hero extends Component {
-  render() {
-    return (
-      <Wrapper className="cp-c-row cp-c-align-start-center cp-c-wrap cp-c-padding-4">
-        <div className="cp-i-100 cp-i-md-40">
-          <HeroTitle>Conquer your workflows</HeroTitle>
-          <HeroDescription>
-            A workflows-first CRM to boost quality, collaboration, and
-            productivity
-          </HeroDescription>
-          <StyledButton type="primary">Request demo</StyledButton>
-        </div>
-        <HeroImage src="" className="cp-i-100 cp-i-md-60" />
-      </Wrapper>
-    );
-  }
-}
+const Hero = ({ showModal, toggleModal }) => (
+  <Wrapper className="cp-c-row cp-c-align-start-center cp-c-wrap cp-c-padding-4">
+    <div className="cp-i-100 cp-i-md-40">
+      <HeroTitle>Conquer your workflows</HeroTitle>
+      <HeroDescription>
+        A workflows-first CRM to boost quality, collaboration, and productivity
+      </HeroDescription>
+      <StyledButton onClick={toggleModal} type="primary">
+        Request demo
+      </StyledButton>
+    </div>
+    <HeroImage className="cp-i-100 cp-i-md-60" />
+    <Modal
+      title="Request demo"
+      visible={showModal}
+      closable={true}
+      onCancel={toggleModal}
+      footer={null}
+    >
+      <ContactForm />
+    </Modal>
+  </Wrapper>
+);
 
 export default Hero;

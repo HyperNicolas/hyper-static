@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
-import { Icon, Button } from 'antd';
+import { Icon, Button, Modal } from 'antd';
+import ContactForm from '../form/ContactForm';
 
 const Container = styled.div`
   border-bottom: ${props => props.theme.thinBorder};
@@ -10,6 +11,7 @@ const Container = styled.div`
   left: 0;
   right: 0;
   background: #fff;
+  z-index: 100;
 `;
 const Logo = styled.div`
   padding-top: 50%;
@@ -36,22 +38,49 @@ const StyledLink = styled.a`
   line-height: 2rem;
 `;
 
-const Header = () => (
-  <Container className="cp-c-row cp-c-align-spacebetween-center">
-    <div className="cp-c-row cp-c-align-start-center">
-      <Logo />
-      <div>
-        <Hyper>Hyper</Hyper>
-        <Xpower>by Xpower</Xpower>
-      </div>
-    </div>
-    <div className="cp-c-row cp-c-align-start-center">
-      <StyledLink href="tel:+329552211">
-        <Icon type="phone" /> +32 9 55 22 11
-      </StyledLink>
-      <Button type="primary">Request demo</Button>
-    </div>
-  </Container>
-);
+class Header extends Component {
+  state = {
+    showModal: false
+  };
+
+  toggleModal = () => {
+    this.setState({
+      showModal: !this.state.showModal
+    });
+  };
+  render() {
+    const { showModal } = this.state;
+    return (
+      <>
+        <Container className="cp-c-row cp-c-align-spacebetween-center">
+          <div className="cp-c-row cp-c-align-start-center">
+            <Logo />
+            <div>
+              <Hyper>Hyper</Hyper>
+              <Xpower>by Xpower</Xpower>
+            </div>
+          </div>
+          <div className="cp-c-row cp-c-align-start-center">
+            <StyledLink href="tel:+329552211">
+              <Icon type="phone" /> +32 9 55 22 11
+            </StyledLink>
+            <Button onClick={this.toggleModal} type="primary">
+              Request demo
+            </Button>
+          </div>
+        </Container>
+        <Modal
+          title="Request demo"
+          visible={showModal}
+          closable={true}
+          onCancel={this.toggleModal}
+          footer={null}
+        >
+          <ContactForm />
+        </Modal>
+      </>
+    );
+  }
+}
 
 export default Header;

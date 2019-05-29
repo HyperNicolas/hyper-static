@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Button } from 'antd';
 import { Wrapper } from '../components/utils/styledComponents';
@@ -39,32 +39,48 @@ const customers = [
   '/static/ttc.png'
 ];
 
-const Index = () => (
-  <>
-    <Hero />
-    <Summary />
-    <Tools />
-    <GenericContainer background className="cp-c-padding-3">
-      <Wrapper>
-        <Title tool>Some of our Customers</Title>
-        <div className="cp-c-row cp-c-align-spacebetween-center">
-          {customers.map(customer => (
-            <Customer className="cp-i-15" key={customer} src={customer} />
-          ))}
-        </div>
-      </Wrapper>
-    </GenericContainer>
-    <GenericContainer className="cp-c-padding-3">
-      <Wrapper>
-        <Title tool>Start automating your business</Title>
-        <HeroDescription>
-          Request a demo, start building your first workflows and discover how
-          it can improve your business.
-        </HeroDescription>
-        <StyledButton type="primary">Request demo</StyledButton>
-      </Wrapper>
-    </GenericContainer>
-  </>
-);
+class Index extends Component {
+  state = {
+    showModal: false
+  };
 
+  toggleModal = () => {
+    this.setState({
+      showModal: !this.state.showModal
+    });
+  };
+
+  render() {
+    const { showModal } = this.state;
+    return (
+      <>
+        <Hero showModal={showModal} toggleModal={this.toggleModal} />
+        <Summary />
+        <Tools />
+        <GenericContainer background className="cp-c-padding-3">
+          <Wrapper>
+            <Title tool>Some of our Customers</Title>
+            <div className="cp-c-row cp-c-align-spacebetween-center">
+              {customers.map(customer => (
+                <Customer className="cp-i-15" key={customer} src={customer} />
+              ))}
+            </div>
+          </Wrapper>
+        </GenericContainer>
+        <GenericContainer className="cp-c-padding-3">
+          <Wrapper>
+            <Title tool>Start automating your business</Title>
+            <HeroDescription>
+              Request a demo, start building your first workflows and discover
+              how it can improve your business.
+            </HeroDescription>
+            <StyledButton onClick={this.toggleModal} type="primary">
+              Request demo
+            </StyledButton>
+          </Wrapper>
+        </GenericContainer>
+      </>
+    );
+  }
+}
 export default Index;

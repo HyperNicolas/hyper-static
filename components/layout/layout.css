@@ -25,7 +25,7 @@ body {
   padding: 0;
 }
 .ant-modal .ant-modal-body {
-  padding: 0;
+  padding: 8px;
 }
 .ant-popover .ant-popover-inner-content {
   padding: 0.5rem 0;

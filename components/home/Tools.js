@@ -41,7 +41,7 @@ const StyledIcon = styled(Icon)`
 
 const tools = [
   {
-    title: 'Integrated CRM tool',
+    title: 'Integrated CRM',
     description: 'Centralise and manage all your contact info efficiently',
     bullets: [
       'Centralise and manage all data from customers, propsects, suppliers and employees',

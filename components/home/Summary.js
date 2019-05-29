@@ -14,6 +14,7 @@ const Description = styled.div`
 const SummaryIcon = styled(Icon)`
   font-size: 3.5rem;
   margin-bottom: 0.5rem;
+  color: #4da0ff;
 `;
 
 const GenericContainer = styled.div`
@@ -23,10 +24,11 @@ const GenericContainer = styled.div`
 
 const summary = [
   {
-    title: 'Flexibility',
+    title: 'Continuous improvement',
     description:
       'Easily design, deploy, and evaluate new ways of working to your workforce.',
-    icon: 'rocket'
+    icon: 'rise',
+    theme: 'outlined'
   },
   {
     title: 'Web-based',
@@ -45,15 +47,28 @@ const summary = [
     description:
       'Pull and push data from multiple sources and manage everything in one single platform, your Hyperportal.',
     icon: 'api'
+  },
+  {
+    title: 'Expert support',
+    description:
+      'We have an experienced team ready to help with your digital transformation efforts.',
+    icon: 'team',
+    theme: 'outlined'
+  },
+  {
+    title: 'Flexibility',
+    description:
+      'Combine our Workflows and CMS engines to develop your own custom applications, without ever needing to code a single line.',
+    icon: 'rocket'
   }
 ];
 
 const Summary = () => (
   <GenericContainer background>
     <Wrapper className="cp-c-row cp-c-align-spacebetween-start cp-c-wrap cp-c-padding-4">
-      {summary.map(({ title, description, icon }) => (
-        <div key={title} className="cp-i-100 cp-i-md-50">
-          <SummaryIcon type={icon} theme="twoTone" />
+      {summary.map(({ title, description, icon, theme }) => (
+        <div key={title} className="cp-i-100 cp-i-md-50 cp-i-lg-33">
+          <SummaryIcon type={icon} theme={theme ? theme : 'twoTone'} />
           <Title>{title}</Title>
           <Description>{description}</Description>
         </div>

@@ -30,12 +30,17 @@ const Xpower = styled.div`
   color: ${props => props.theme.textColorLight};
 `;
 const StyledLink = styled.a`
-  color: ${props => props.theme.textColor};
-  padding-right: 1.5rem;
-  border-right: ${props => props.theme.thinBorder};
-  margin-right: 1.5rem;
-  height: 2rem;
-  line-height: 2rem;
+  display: none;
+
+  ${media.md} {
+    display: block;
+    border-right: ${props => props.theme.thinBorder};
+    padding-right: 1.5rem;
+    margin-right: 1.5rem;
+    color: ${props => props.theme.textColor};
+    height: 2rem;
+    line-height: 2rem;
+  }
 `;
 
 class Header extends Component {

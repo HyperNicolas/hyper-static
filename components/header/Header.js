@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Icon, Button, Modal } from 'antd';
 import ContactForm from '../form/ContactForm';
+import { media } from '../utils/styledComponents';
 
 const Container = styled.div`
   border-bottom: ${props => props.theme.thinBorder};

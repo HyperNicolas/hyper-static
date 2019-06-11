@@ -1,7 +1,13 @@
 {
   "version": 2,
+  "alias": ["www.gethyper.eu"],
   "builds": [{ "src": "package.json", "use": "@now/next" }],
   "routes": [
+    {
+      "src": "/(.*)",
+      "status": 301,
+      "headers": { "Location": "https://gethyper.eu/$1" }
+    },
     { "src": "^/static/(.*)", "dest": "/static/$1" },
     { "src": "^/favicon.ico", "dest": "/favicon.ico" },
     { "src": "^/(.*)", "dest": "/index.html" }

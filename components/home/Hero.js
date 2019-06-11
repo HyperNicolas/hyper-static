@@ -29,8 +29,12 @@ const HeroImage = styled.div`
   }
 `;
 
-const Hero = ({ showModal, toggleModal }) => (
-  <Wrapper className="cp-c-row cp-c-align-start-center cp-c-wrap cp-c-padding-4">
+const Hero = ({ className, showModal, toggleModal }) => (
+  <Wrapper
+    className={
+      (className, 'cp-c-row cp-c-align-start-center cp-c-wrap cp-c-padding-4')
+    }
+  >
     <div className="cp-i-100 cp-i-md-40">
       <HeroTitle>Conquer your workflows</HeroTitle>
       <HeroDescription>

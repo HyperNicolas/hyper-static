@@ -63,8 +63,8 @@ const summary = [
   }
 ];
 
-const Summary = () => (
-  <GenericContainer background>
+const Summary = ({ className }) => (
+  <GenericContainer className={className} background>
     <Wrapper className="cp-c-row cp-c-align-spacebetween-start cp-c-wrap cp-c-padding-4">
       {summary.map(({ title, description, icon, theme }) => (
         <div key={title} className="cp-i-100 cp-i-md-50 cp-i-lg-33">
